@@ -1,0 +1,15 @@
+syntax = "proto3";
+package execution.v1;
+
+service Executor {
+  rpc Run(RunRequest) returns (RunResponse);
+}
+
+message RunRequest {
+  string workflow_id = 1;
+}
+
+message RunResponse {
+  string run_id = 1;
+  string status = 2;
+}

@@ -1,0 +1,13 @@
+# NimbusFlowWXZ3 declarative workflow definition
+name: sample-pipeline
+version: 1.0
+steps:
+  - id: extract
+    type: task
+    command: extractor
+  - id: transform
+    type: task
+    command: transformer
+  - id: load
+    type: task
+    command: loader
